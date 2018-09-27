@@ -82,4 +82,17 @@ public class ArrayDemo{
     }
     printArray(vals);
   }
+
+  //2b. Make a new 2d array the same dimensions as the given parameter.
+  //Fill that array with with 1's, except where the value of the original array is negative:
+  //you must fill those with 3's instead.
+  //You may NOT modify the parameter vals.
+  public static int[][] fill2DCopy(int[][] vals){
+    int[][] copy = new int[vals.length][];
+    for (int x=0; x < copy.length; x++) {
+      copy[x] = new int[vals[x].length];
+    }
+    return copy;
+  }
+
 }
