@@ -26,9 +26,9 @@ public class ArrayDemo{
 
     //Testing 2b.
     System.out.println("test2b :");
-    int[][] test2b = new int[][] {{5,6,7},{8,9,10,11}};
-    fill2D(fill2DCopy(test2b));
-    System.out.print("\nexpecting {{3,1,1},{1,3,1,1}\n\n");
+    int[][] test2b = new int[][] {{5,-6,7},{-8,9,-10,11}};
+    printArray(fill2DCopy(test2b));
+    System.out.print("\nexpecting {{1,3,1},{3,1,3,1}\n\n");
   }
 
   //0a. Make a function to print a 1D array of ints.
@@ -100,6 +100,16 @@ public class ArrayDemo{
     int[][] copy = new int[vals.length][];
     for (int x=0; x < copy.length; x++) {
       copy[x] = new int[vals[x].length];
+    }
+    for (int y=0; y < copy.length; y++) {
+      for (int z=0; z < copy[y].length; z++) {
+        if (vals[y][z] > 0) {
+          copy[y][z] = 1;
+        }
+        else {
+          copy[y][z] = 3;
+        }
+      }
     }
     return copy;
   }
