@@ -20,6 +20,11 @@ public class ArrayDemo{
     int[][] test2a = new int[][] {{5,6,7},{8,9,10}};
     fill2D(test2a);
     System.out.print("\nexpecting {{3,1,1},{1,3,1}\n\n");
+    //Testing 2b.
+    System.out.println("test2b :");
+    int[][] test2b = new int[][] {{5,6,7},{8,9,10,11}};
+    fill2D(fill2DCopy(test2b));
+    System.out.print("\nexpecting {{3,1,1},{1,3,1,1}\n\n");
   }
 
   //0a. Make a function to print a 1D array of ints.
