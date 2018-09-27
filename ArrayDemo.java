@@ -15,6 +15,11 @@ public class ArrayDemo{
     int[][] test1 = new int[][] {{1,0,3},{4,0,6}};
     System.out.print(countZeros2D(test1));
     System.out.print("\nexpecting 2\n\n");
+    //Testing 2a.
+    System.out.println("test2a :");
+    int[][] test2a = new int[][] {{5,6,7},{8,9,10}};
+    fill2D(test2a);
+    System.out.print("\nexpecting {{3,1,1},{1,3,1}\n\n");
   }
 
   //0a. Make a function to print a 1D array of ints.
@@ -58,5 +63,23 @@ public class ArrayDemo{
       }
     }
     return ans;
+  }
+
+  //2a. Modify a given 2D array of integer as follows:
+  //Fill the of integers with 1's
+  //EXCEPT when the row number is the same as the column number:
+  //you must fill those with 3's instead.
+  public static void fill2D(int[][] vals){
+    for (int x=0; x < vals.length; x++) {
+      for (int y=0; y < vals[x].length; y++) {
+        if (x == y) {
+          vals[x][y] = 3;
+        }
+        else {
+          vals[x][y] = 1;
+        }
+      }
+    }
+    printArray(vals);
   }
 }
