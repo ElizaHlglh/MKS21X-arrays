@@ -5,21 +5,25 @@ public class ArrayDemo{
     System.out.println("test0a :");
     printArray(test0a);
     System.out.print("\n");
+
     //Testing 0b.
     System.out.println("test0b :");
     int[][] test0b = new int[][] {{1,2,3},{4,5,6}};
     printArray(test0b);
     System.out.print("\n\n");
+
     //Testing 1.
     System.out.println("test1 :");
     int[][] test1 = new int[][] {{1,0,3},{4,0,6}};
     System.out.print(countZeros2D(test1));
     System.out.print("\nexpecting 2\n\n");
+
     //Testing 2a.
     System.out.println("test2a :");
     int[][] test2a = new int[][] {{5,6,7},{8,9,10}};
     fill2D(test2a);
     System.out.print("\nexpecting {{3,1,1},{1,3,1}\n\n");
+
     //Testing 2b.
     System.out.println("test2b :");
     int[][] test2b = new int[][] {{5,6,7},{8,9,10,11}};
